@@ -22,6 +22,7 @@ export default [
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
   comments.recommended,
+  unicorn.configs['flat/recommended'],
   prettierConfig,
   {
     languageOptions: {
@@ -33,7 +34,6 @@ export default [
       reportUnusedDisableDirectives: true,
     },
     plugins: {
-      unicorn,
       '@stylistic': stylistic,
       'simple-import-sort': simpleImportSort,
     },

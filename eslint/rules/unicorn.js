@@ -21,6 +21,12 @@ const disabledRules = {
    */
   'unicorn/no-null': 'off',
   /**
+   * Prefer `globalThis` over `window`, `self`, and `global`.
+   *
+   * 🔧 Fixable - https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-global-this.md
+   */
+  'unicorn/prefer-global-this': 'off',
+  /**
    * Prefer JavaScript modules (ESM) over CommonJS.
    *
    * 🔧 Fixable - https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-module.md
