@@ -358,6 +358,22 @@ export default [
 ];
 ```
 
+#### `import/no-cycle`
+
+By default, this rule is only enabled in CI for the performance sake since it's
+the slowest rule. If you want to enable it in the development or completely
+disable it, you can overwrite it in your config:
+
+```js
+export default [
+  {
+    rules: {
+      'import/no-cycle': 'off',
+    },
+  },
+];
+```
+
 ### Debugging ESLint
 
 Sometimes you need to debug ESLint to understand what actually happens and why
