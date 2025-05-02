@@ -1,14 +1,14 @@
 // https://github.com/lydell/eslint-plugin-simple-import-sort#custom-grouping
 const baseImportOrder = [
   // Side effect imports.
-  ['^\\u0000'],
+  [String.raw`^\u0000`],
   // Node.js builtins prefixed with `node:`.
   ['^node:'],
   // Packages.
-  ['^@?\\w'],
+  [String.raw`^@?\w`],
   // 1. Special aliases (e.g. `@/`, `~/`).
   // 2. Relative imports.
-  ['^[@~^$#!]/', '^\\.'],
+  ['^[@~^$#!]/', String.raw`^\.`],
 ];
 
 /** Type imports order */
