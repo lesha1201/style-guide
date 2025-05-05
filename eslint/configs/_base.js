@@ -2,6 +2,7 @@ import * as eslintrc from '@eslint/eslintrc';
 import js from '@eslint/js';
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import stylistic from '@stylistic/eslint-plugin';
+import { defineConfig } from 'eslint/config';
 import prettierConfig from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
@@ -15,10 +16,8 @@ import unicornRules from '../rules/unicorn.js';
 
 /**
  * The base ESLint config which is shared among all environments.
- *
- * @type {import('eslint').Linter.Config[]}
  */
-export default [
+export default defineConfig(
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
   comments.recommended,
@@ -55,4 +54,4 @@ export default [
       ...unicornRules,
     },
   },
-];
+);

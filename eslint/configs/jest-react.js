@@ -1,4 +1,4 @@
+import { defineConfig } from 'eslint/config';
 import testingLibrary from 'eslint-plugin-testing-library';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [testingLibrary.configs['flat/react']];
+export default defineConfig(testingLibrary.configs['flat/react']);

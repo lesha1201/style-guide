@@ -12,6 +12,8 @@ import { minimatch } from 'minimatch';
  * ```js
  * applyConfigsToFiles(['*.{ts,tsx}'], tseslint.configs.recommended);
  * ```
+ *
+ * @deprecated Use `defineConfig` from `eslint`.
  */
 export function applyConfigsToFiles(globPatterns, configs) {
   const minimatchOptions = { dot: true };

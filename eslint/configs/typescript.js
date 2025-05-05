@@ -1,15 +1,14 @@
+import { defineConfig } from 'eslint/config';
 import tsdoc from 'eslint-plugin-tsdoc';
 import * as tseslint from 'typescript-eslint';
 
 import { TYPESCRIPT_FILES } from '../constants.js';
 import tsdocRules from '../rules/tsdoc.js';
 import typescriptRules from '../rules/typescript.js';
-import { applyConfigsToFiles } from '../utils.js';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
-  ...tseslint.configs.strictTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+export default defineConfig(
+  tseslint.configs.strictTypeChecked,
+  tseslint.configs.stylisticTypeChecked,
   {
     languageOptions: {
       parserOptions: {
@@ -24,11 +23,10 @@ export default [
       ...typescriptRules,
     },
   },
-  ...applyConfigsToFiles(TYPESCRIPT_FILES, [
-    {
-      rules: {
-        ...tsdocRules,
-      },
+  {
+    files: TYPESCRIPT_FILES,
+    rules: {
+      ...tsdocRules,
     },
-  ]),
-];
+  },
+);

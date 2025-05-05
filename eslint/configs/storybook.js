@@ -1,4 +1,4 @@
+import { defineConfig } from 'eslint/config';
 import storybook from 'eslint-plugin-storybook';
 
-/** @type {import('eslint').Linter.Config} */
-export default [...storybook.configs['flat/recommended']];
+export default defineConfig(storybook.configs['flat/recommended']);

@@ -113,6 +113,7 @@ The following additional configs are available:
 
 #### React
 
+- [eslint-react](https://github.com/Rel1cx/eslint-react)
 - [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
 - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks)
 - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
@@ -155,43 +156,42 @@ import node from '@datarockets/style-guide/eslint/node';
 import playwright from '@datarockets/style-guide/eslint/playwright';
 import storybook from '@datarockets/style-guide/eslint/storybook';
 import ts from '@datarockets/style-guide/eslint/typescript';
-import {
-  applyConfigsToFiles,
-  includeIgnoreFile,
-} from '@datarockets/style-guide/eslint/utils';
+import { includeIgnoreFile } from '@datarockets/style-guide/eslint/utils';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 const gitignorePath = path.resolve(import.meta.dirname, '.gitignore');
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default defineConfig(
   includeIgnoreFile(gitignorePath),
-  {
-    ignores: [
-      // Any directories/files which makes sense to ignore to improve ESLint
-      // performance.
-    ],
-  },
-  ...node,
-  ...browser,
-  ...ts,
-  ...next,
+  globalIgnores([
+    // Any directories/files which makes sense to ignore to improve ESLint
+    // performance.
+  ]),
+  node,
+  browser,
+  ts,
+  next,
   // Unit tests (Jest)
-  ...applyConfigsToFiles(
-    [
+  {
+    files: [
       'src/**/__tests__/**/*.{js,jsx,ts,tsx}',
       'src/**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
       'jest.setup.{js,ts}',
     ],
-    [...jest, ...jestReact, { settings: { jest: { version: 20 } } }],
-  ),
+    extends: [jest, jestReact],
+    settings: { jest: { version: 20 } },
+  },
   // E2E tests (Playwright)
-  ...applyConfigsToFiles(
-    ['tests/**/?(*.)+(spec|test).{js,jsx,ts,tsx}'],
-    playwright,
-  ),
+  {
+    files: ['tests/**/?(*.)+(spec|test).{js,jsx,ts,tsx}'],
+    extends: [playwright],
+  },
   // Storybook
-  ...applyConfigsToFiles(['*.stories.{js,jsx,ts,tsx}'], storybook),
-];
+  {
+    files: ['*.stories.{js,jsx,ts,tsx}'],
+    extends: [storybook],
+  },
+);
 ```
 
 `next.config.js`:
@@ -233,20 +233,22 @@ export default [
 ];
 ```
 
-In case you need to apply multiple configs to certain files, you can use `applyConfigsToFiles` utility. That utility preserves the original configs `files` and also applies the patterns you specify:
+In case you need to apply multiple configs to certain files, you can use `extends` from `defineConfig`.:
 
 ```js
-export default [
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig(
   // ...intial configuration
-  ...applyConfigsToFiles(
-    ['some-dir/**/*'],
-    [
-      ...externalConfig,
+  {
+    files: ['some-dir/**/*'],
+    extends: [
+      externalConfig,
       // Here, the final `files` should match both 'some-dir/**/*' and '**/*.{ts,tsx}'.
       { files: ['**/*.{ts,tsx}'], rules: { 'some-rule': 'off' } },
     ],
-  ),
-];
+  },
+);
 ```
 
 ### Configuring rules/settings
