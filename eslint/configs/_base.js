@@ -21,7 +21,7 @@ export default defineConfig(
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
   comments.recommended,
-  unicorn.configs['flat/recommended'],
+  unicorn.configs.recommended,
   prettierConfig,
   {
     languageOptions: {

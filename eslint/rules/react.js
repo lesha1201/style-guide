@@ -89,8 +89,9 @@ export const reactRules = {
 
 const disabledReactTypeCheckedRules = {
   '@eslint-react/dom/no-unknown-property': 'off',
-  '@eslint-react/no-duplicate-jsx-props': 'off',
-  '@eslint-react/use-jsx-vars': 'off',
+  '@eslint-react/jsx-no-duplicate-props': 'off',
+  '@eslint-react/jsx-uses-react': 'off',
+  '@eslint-react/jsx-uses-vars': 'off',
   // We use another rule for that which is type-safe.
   'react/jsx-no-leaked-render': 'off',
 };
