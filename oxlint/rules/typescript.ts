@@ -1,0 +1,103 @@
+import type { DummyRuleMap } from 'oxlint';
+
+/**
+ * Rules enabled by `import` plugin but are better handled by TypeScript and
+ * `typescript` plugin.
+ */
+const disabledImportRules = {
+  'import/default': 'off',
+  'import/export': 'off',
+  'import/named': 'off',
+  'import/namespace': 'off',
+} as DummyRuleMap;
+
+export default {
+  ...disabledImportRules,
+  'typescript/adjacent-overload-signatures': 'error',
+  'typescript/array-type': 'error',
+  'typescript/ban-ts-comment': ['error', { minimumDescriptionLength: 10 }],
+  'typescript/ban-tslint-comment': 'error',
+  'typescript/consistent-generic-constructors': 'error',
+  'typescript/consistent-indexed-object-style': 'error',
+  'typescript/consistent-type-assertions': 'error',
+  'typescript/consistent-type-definitions': 'error',
+  'typescript/consistent-type-exports': [
+    'warn',
+    { fixMixedExportsWithInlineTypeSpecifier: true },
+  ],
+  'typescript/consistent-type-imports': [
+    'warn',
+    { fixStyle: 'separate-type-imports' },
+  ],
+  'typescript/no-confusing-non-null-assertion': 'error',
+  'typescript/no-confusing-void-expression': 'error',
+  'typescript/no-deprecated': 'error',
+  'typescript/no-dynamic-delete': 'error',
+  'typescript/no-explicit-any': 'error',
+  'typescript/no-extraneous-class': 'error',
+  'typescript/no-inferrable-types': 'error',
+  'typescript/no-misused-promises': [
+    'error',
+    { checksVoidReturn: { attributes: false } },
+  ],
+  'typescript/no-mixed-enums': 'error',
+  'typescript/no-namespace': 'error',
+  'typescript/no-non-null-asserted-nullish-coalescing': 'error',
+  'typescript/no-non-null-assertion': 'error',
+  'typescript/no-require-imports': 'error',
+  'typescript/no-unnecessary-boolean-literal-compare': 'error',
+  'typescript/no-unnecessary-condition': 'error',
+  'typescript/no-unnecessary-qualifier': 'warn',
+  'typescript/no-unnecessary-template-expression': 'error',
+  'typescript/no-unnecessary-type-arguments': 'error',
+  'typescript/no-unnecessary-type-assertion': 'error',
+  'typescript/no-unnecessary-type-constraint': 'error',
+  'typescript/no-unsafe-argument': 'error',
+  'typescript/no-unsafe-assignment': 'error',
+  'typescript/no-unsafe-call': 'error',
+  'typescript/no-unsafe-enum-comparison': 'error',
+  'typescript/no-unsafe-function-type': 'error',
+  'typescript/no-unsafe-member-access': 'error',
+  'typescript/no-unsafe-return': 'error',
+  'typescript/only-throw-error': 'error',
+  'typescript/prefer-find': 'error',
+  'typescript/prefer-for-of': 'error',
+  'typescript/prefer-function-type': 'error',
+  'typescript/prefer-includes': 'error',
+  'typescript/prefer-literal-enum-member': 'error',
+  'typescript/prefer-optional-chain': 'error',
+  'typescript/prefer-promise-reject-errors': 'error',
+  'typescript/prefer-reduce-type-parameter': 'error',
+  'typescript/prefer-return-this-type': 'error',
+  'typescript/prefer-string-starts-ends-with': 'error',
+  'typescript/related-getter-setter-pairs': 'error',
+  'typescript/require-array-sort-compare': [
+    'error',
+    { ignoreStringArrays: true },
+  ],
+  'typescript/require-await': 'error',
+  'typescript/restrict-plus-operands': [
+    'error',
+    {
+      allowAny: false,
+      allowBoolean: false,
+      allowNullish: false,
+      allowNumberAndString: false,
+      allowRegExp: false,
+    },
+  ],
+  'typescript/restrict-template-expressions': [
+    'error',
+    {
+      allowAny: false,
+      allowBoolean: false,
+      allowNever: false,
+      allowNullish: false,
+      allowNumber: true,
+      allowRegExp: false,
+    },
+  ],
+  'typescript/return-await': ['error', 'error-handling-correctness-only'],
+  'typescript/switch-exhaustiveness-check': 'error',
+  'typescript/use-unknown-in-catch-callback-variable': 'error',
+} as DummyRuleMap;

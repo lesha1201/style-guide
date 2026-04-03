@@ -1,0 +1,14 @@
+{
+  "extends": "./typescript/tsconfig.base.json",
+  "compilerOptions": {
+    "incremental": false,
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "declaration": true,
+    "outDir": "dist",
+    "types": ["node"]
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["eslint", "oxlint"]
+}
