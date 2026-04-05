@@ -19,10 +19,6 @@ export default defineConfig({
   },
   plugins: ['oxc', 'eslint', 'unicorn', 'import', 'typescript'],
   jsPlugins: ['@stylistic/eslint-plugin', 'eslint-plugin-tsdoc'],
-  options: {
-    typeAware: true,
-    reportUnusedDisableDirectives: 'warn',
-  },
   env: {
     es2026: true,
   },
