@@ -40,6 +40,8 @@ export default {
         'deps',
         // ESLint-related changes
         'eslint',
+        // Oxlint-related changes
+        'oxlint',
         // Prettier-related changes
         'prettier',
         // TypeScript-related changes
