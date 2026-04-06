@@ -2,6 +2,7 @@ import type { Linter } from 'eslint';
 
 const disabledReactRules = {
   '@eslint-react/dom/no-missing-button-type': 'off',
+  '@eslint-react/jsx-no-children-prop': 'off',
   '@eslint-react/no-array-index-key': 'off',
   '@eslint-react/set-state-in-effect': 'off',
 } as Linter.RulesRecord;
