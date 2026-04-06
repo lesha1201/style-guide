@@ -49,7 +49,6 @@ export default {
   'typescript/no-unnecessary-condition': 'error',
   'typescript/no-unnecessary-qualifier': 'warn',
   'typescript/no-unnecessary-template-expression': 'error',
-  'typescript/no-unnecessary-type-arguments': 'error',
   'typescript/no-unnecessary-type-assertion': 'error',
   'typescript/no-unnecessary-type-constraint': 'error',
   'typescript/no-unsafe-argument': 'error',
