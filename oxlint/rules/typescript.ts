@@ -46,7 +46,10 @@ export default {
   'typescript/no-non-null-assertion': 'error',
   'typescript/no-require-imports': 'error',
   'typescript/no-unnecessary-boolean-literal-compare': 'error',
-  'typescript/no-unnecessary-condition': 'error',
+  'typescript/no-unnecessary-condition': [
+    'error',
+    { allowConstantLoopConditions: 'only-allowed-literals' },
+  ],
   'typescript/no-unnecessary-qualifier': 'warn',
   'typescript/no-unnecessary-template-expression': 'error',
   'typescript/no-unnecessary-type-assertion': 'error',
