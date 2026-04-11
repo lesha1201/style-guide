@@ -42,8 +42,8 @@ export default {
         'eslint',
         // Oxlint-related changes
         'oxlint',
-        // Prettier-related changes
-        'prettier',
+        // Oxfmt-related changes
+        'oxfmt',
         // TypeScript-related changes
         'typescript',
       ],

@@ -1,10 +1,10 @@
 // oxlint-disable typescript/no-unsafe-member-access, typescript/no-unsafe-argument
+import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import * as tseslint from 'typescript-eslint';
-import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 
-import commentsRules from '../rules/comments.js';
+import commentsRules from '../rules/comments.ts';
 
 /**
  * The base ESLint config which is shared among all environments.

@@ -1,13 +1,13 @@
 import { defineConfig } from 'oxlint';
 
-import importRules from '../rules/import.js';
-import standardRules from '../rules/standard.js';
-import stylisticRules from '../rules/stylistic.js';
-import unicornRules from '../rules/unicorn.js';
-import tsdocRules from '../rules/tsdoc.js';
-import typescriptRules from '../rules/typescript.js';
-import { TYPESCRIPT_FILES } from '../constants.js';
-import oxcRules from '../rules/oxc.js';
+import { TYPESCRIPT_FILES } from '../constants.ts';
+import importRules from '../rules/import.ts';
+import oxcRules from '../rules/oxc.ts';
+import standardRules from '../rules/standard.ts';
+import stylisticRules from '../rules/stylistic.ts';
+import tsdocRules from '../rules/tsdoc.ts';
+import typescriptRules from '../rules/typescript.ts';
+import unicornRules from '../rules/unicorn.ts';
 
 export default defineConfig({
   // There is no recommended configs in Oxlint for now and instead it has

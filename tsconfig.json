@@ -4,11 +4,13 @@
     "incremental": false,
     "target": "ESNext",
     "module": "NodeNext",
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
     "moduleResolution": "NodeNext",
     "declaration": true,
     "outDir": "dist",
     "types": ["node"]
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["eslint", "oxlint"]
+  "include": ["eslint", "oxlint", "oxfmt"]
 }

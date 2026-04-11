@@ -1,6 +1,6 @@
 import { defineConfig } from 'oxlint';
 
-import reactRules from '../rules/react.js';
+import reactRules from '../rules/react.ts';
 
 export default defineConfig({
   plugins: ['react', 'jsx-a11y'],

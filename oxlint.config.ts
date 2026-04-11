@@ -1,12 +1,6 @@
 import { defineConfig } from 'oxlint';
-import type { OxlintConfig } from 'oxlint';
 
-import { createJiti } from 'jiti';
-
-const jiti = createJiti(import.meta.url);
-const nodeConfig: OxlintConfig = await jiti.import('./oxlint/configs/node.ts', {
-  default: true,
-});
+import nodeConfig from './oxlint/configs/node.ts';
 
 export default defineConfig({
   extends: [nodeConfig],

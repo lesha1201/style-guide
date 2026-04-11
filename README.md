@@ -5,9 +5,10 @@ for popular linting and styling tools.
 
 The following configs are available, and are designed to be used together.
 
-- [Prettier](#prettier)
-- [ESLint](#eslint)
-- [TypeScript](#typescript-1)
+- [Oxlint]
+- [Oxfmt]
+- [ESLint]
+- [TypeScript]
 
 ## Contributing
 
