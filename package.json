@@ -51,13 +51,13 @@
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
     "@eslint-react/eslint-plugin": "^4.2.3",
-    "@eslint/compat": "^2.0.3",
+    "@eslint/compat": "^2.0.5",
     "@stylistic/eslint-plugin": "^5.10.0",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-storybook": "^10.3.4",
+    "eslint-plugin-storybook": "^10.3.5",
     "eslint-plugin-tsdoc": "^0.5.2",
     "globals": "^17.4.0",
-    "typescript-eslint": "^8.58.0"
+    "typescript-eslint": "^8.58.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
@@ -68,28 +68,25 @@
     "eslint": "^10.1.0",
     "husky": "^9.1.7",
     "oxfmt": "^0.44.0",
-    "oxlint": "^1.58.0",
-    "oxlint-tsgolint": "^0.19.0",
+    "oxlint": "^1.59.0",
+    "oxlint-tsgolint": "^0.20.0",
     "semantic-release": "^25.0.3",
     "typescript": "^6.0.2"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0 <11",
     "oxfmt": ">=0.44.0 <1",
-    "oxlint": ">=1.57.0 <2",
+    "oxlint": ">=1.59.0 <2",
     "typescript": ">=5.0.0 <7"
   },
   "peerDependenciesMeta": {
-    "@next/eslint-plugin-next": {
-      "optional": true
-    },
     "eslint": {
       "optional": true
     },
-    "oxlint": {
+    "oxfmt": {
       "optional": true
     },
-    "prettier": {
+    "oxlint": {
       "optional": true
     },
     "typescript": {
