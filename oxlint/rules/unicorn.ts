@@ -101,4 +101,4 @@ export default {
   'unicorn/switch-case-braces': 'error',
   'unicorn/text-encoding-identifier-case': 'error',
   'unicorn/throw-new-error': 'error',
-} as DummyRuleMap;
+} satisfies DummyRuleMap;

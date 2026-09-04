@@ -76,4 +76,4 @@ export default {
   'prefer-template': 'warn',
   'symbol-description': 'error',
   yoda: 'warn',
-} as DummyRuleMap;
+} satisfies DummyRuleMap;

@@ -3,6 +3,7 @@ import type { DummyRuleMap } from 'oxlint';
 export default {
   'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
   'import/first': 'error',
+  'import/newline-after-import': 'warn',
   'import/no-absolute-path': 'error',
   'import/no-cycle': process.env.CI ? 'error' : 'off',
   'import/no-duplicates': 'warn',
@@ -10,4 +11,4 @@ export default {
   'import/no-named-as-default': 'warn',
   'import/no-named-as-default-member': 'warn',
   'import/no-self-import': 'error',
-} as DummyRuleMap;
+} satisfies DummyRuleMap;

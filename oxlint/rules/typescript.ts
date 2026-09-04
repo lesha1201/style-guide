@@ -9,7 +9,7 @@ const disabledImportRules = {
   'import/export': 'off',
   'import/named': 'off',
   'import/namespace': 'off',
-} as DummyRuleMap;
+} satisfies DummyRuleMap;
 
 export default {
   ...disabledImportRules,
@@ -102,4 +102,4 @@ export default {
   'typescript/return-await': ['error', 'error-handling-correctness-only'],
   'typescript/switch-exhaustiveness-check': 'error',
   'typescript/use-unknown-in-catch-callback-variable': 'error',
-} as DummyRuleMap;
+} satisfies DummyRuleMap;

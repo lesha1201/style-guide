@@ -11,8 +11,8 @@ const a11yRules = {
       img: ['Image'],
     },
   ],
-} as DummyRuleMap;
+} satisfies DummyRuleMap;
 
 export default {
   ...a11yRules,
-} as DummyRuleMap;
+} satisfies DummyRuleMap;

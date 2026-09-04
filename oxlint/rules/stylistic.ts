@@ -9,4 +9,4 @@ export default {
     { blankLine: 'always', next: '*', prev: 'directive' },
     { blankLine: 'any', next: 'directive', prev: 'directive' },
   ],
-} as DummyRuleMap;
+} satisfies DummyRuleMap;

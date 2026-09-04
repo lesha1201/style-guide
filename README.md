@@ -154,6 +154,10 @@ export default defineConfig({
 >
 > See: https://eslint.org/docs/user-guide/getting-started#installation-and-usage
 
+> Note: under the hood, it uses `typescript-eslint` which doesn't support
+> TypeScript v7 yet. You can still use TypeScript v7 and run it side-by-side
+> with v6 so any utilities can use its API. See below for more details.
+
 Our primary linting tool is Oxlint and this ESLint config is complementary to
 enable some useful plugins that don't work well or missing in Oxlint. It's
 minimal and only enables certain specific rules.
@@ -165,6 +169,20 @@ minimal and only enables certain specific rules.
 If you extend some popular configs for ESLint, you might want to use
 `eslint-plugin-oxlint` to disable overlapping rules in ESLint. Please
 refer to the official documentation: https://github.com/oxc-project/eslint-plugin-oxlint
+
+### Prerequisites
+
+The ESLint utilities/packages relies on TypeScript v6 API. You can still
+use TypeScript v7 along side with v6 by installing them like that:
+
+```json
+{
+  "devDependencies": {
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
+  }
+}
+```
 
 ## TypeScript
 

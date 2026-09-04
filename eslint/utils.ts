@@ -1,1 +1,1 @@
-export { includeIgnoreFile } from '@eslint/compat';
+export { includeIgnoreFile } from '@eslint/config-helpers';
