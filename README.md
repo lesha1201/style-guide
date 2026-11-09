@@ -114,9 +114,9 @@ pnpm i -D oxlint-tsgolint
 
 ```ts
 import base from '@alexey-ryabov/style-guide/oxlint/base';
-import node from '@alexey-ryabov/style-guide/oxlint/node';
 import browser from '@alexey-ryabov/style-guide/oxlint/browser';
 import next from '@alexey-ryabov/style-guide/oxlint/next';
+import node from '@alexey-ryabov/style-guide/oxlint/node';
 import { defineConfig } from 'oxlint';
 
 export default defineConfig({
