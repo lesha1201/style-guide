@@ -40,3 +40,16 @@ jobs:
 
       - name: Lint code
         run: pnpm lint
+
+  playground:
+    name: Playground
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Environment
+        uses: ./.github/actions/setup-environment
+
+      - name: Check playground
+        run: pnpm playground:check

@@ -41,11 +41,10 @@
   },
   "scripts": {
     "build": "rm -rf dist && tsc",
-    "format": "oxfmt --write .",
-    "format:check": "oxfmt --check .",
+    "format": "oxfmt --disable-nested-config --write .",
+    "format:check": "oxfmt --disable-nested-config --check .",
     "lint": "oxlint --disable-nested-config",
     "playground:check": "pnpm build && pnpm --filter @alexey-ryabov/style-guide-playground check",
-    "playground:format": "pnpm --filter @alexey-ryabov/style-guide-playground format",
     "prepare": "husky",
     "prepublishOnly": "pnpm build",
     "typecheck": "tsc --noEmit"

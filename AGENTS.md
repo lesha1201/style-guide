@@ -31,13 +31,12 @@ workspace package that exercises the public configs.
 - `pnpm lint` — Oxlint using this repo's own `oxlint.config.ts` with
   `--disable-nested-config`, since the playground has its own config.
 - `pnpm playground:check` — build `dist/`, then run the playground's Oxlint,
-  ESLint, Oxfmt, TypeScript, and diagnostics checks. `pnpm playground:format`
-  formats the playground. The playground is local-only and not part of CI.
+  ESLint, Oxfmt, TypeScript, and diagnostics checks.
 - There is no unit-test suite. Use `pnpm playground:check` to validate configs
   end to end; it builds `dist/` first because consumers receive only `dist/` +
   `typescript/`.
-- CI check order: commitlint (PR commits) → `format:check` → `typecheck` →
-  `lint`.
+- CI runs `commitlint` (PR commits) → `format:check` → `typecheck` → `lint` in
+  the `Lint` job, and `pnpm playground:check` in a parallel `Playground` job.
 - `import/no-cycle` is `error` only when `CI` is set; use `CI=true pnpm lint` to
   catch cycles locally.
 
