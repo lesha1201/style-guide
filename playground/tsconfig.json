@@ -1,0 +1,24 @@
+{
+  "extends": "@alexey-ryabov/style-guide/typescript",
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "incremental": false,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": ["node"]
+  },
+  "include": [
+    "src",
+    ".storybook/**/*.ts",
+    "fixtures",
+    "scripts",
+    "*.config.ts"
+  ],
+  "exclude": ["node_modules"]
+}

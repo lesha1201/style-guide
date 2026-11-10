@@ -2,5 +2,13 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.oxc": "always"
   },
-  "editor.defaultFormatter": "oxc.oxc-vscode"
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "oxc.configPath": null,
+  "oxc.fmt.configPath": null,
+  "oxc.disableNestedConfig": false,
+  "oxc.fmt.disableNestedConfig": false,
+  "oxc.tsConfigPath": null,
+  "oxc.typeAware": null
 }

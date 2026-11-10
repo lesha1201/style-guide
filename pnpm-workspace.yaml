@@ -1,1 +1,4 @@
+packages:
+  - playground
+
 minimumReleaseAge: 120

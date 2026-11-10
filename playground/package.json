@@ -1,0 +1,32 @@
+{
+  "name": "@alexey-ryabov/style-guide-playground",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "pnpm lint && pnpm lint:eslint && pnpm format:check && pnpm typecheck && pnpm check:diagnostics",
+    "check:diagnostics": "node scripts/check-diagnostics.ts",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint --type-aware --deny-warnings src .storybook scripts",
+    "lint:eslint": "eslint --max-warnings=0 src .storybook scripts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@alexey-ryabov/style-guide": "workspace:*",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "eslint": "^10.10.0",
+    "jiti": "^2.7.0",
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.81.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "vitest": "^5.1.0"
+  }
+}

@@ -43,7 +43,9 @@
     "build": "rm -rf dist && tsc",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
-    "lint": "oxlint",
+    "lint": "oxlint --disable-nested-config",
+    "playground:check": "pnpm build && pnpm --filter @alexey-ryabov/style-guide-playground check",
+    "playground:format": "pnpm --filter @alexey-ryabov/style-guide-playground format",
     "prepare": "husky",
     "prepublishOnly": "pnpm build",
     "typecheck": "tsc --noEmit"
@@ -65,13 +67,14 @@
     "@commitlint/types": "^20.5.0",
     "@semantic-release/git": "^10.0.1",
     "@types/node": "^24.13.3",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^10.10.0",
     "husky": "^9.1.7",
     "oxfmt": "^0.78.0",
     "oxlint": "^1.81.0",
     "oxlint-tsgolint": "^7.0.2001",
     "semantic-release": "^25.0.9",
-    "typescript": "^7.0.2"
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
   },
   "peerDependencies": {
     "eslint": ">=10.0.0 <11",

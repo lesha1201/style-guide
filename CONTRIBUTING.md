@@ -21,9 +21,34 @@ Then, run:
 pnpm i
 ```
 
-### Testing
+### Playground
 
-You can test locally on some project by installing local `@alexey-ryabov/style-guide`.
+The private `playground` workspace package exercises all published configs:
+Oxlint (including type-aware rules), ESLint, Oxfmt, and the TypeScript base
+config. It imports the package through its public entrypoints, so the root
+`playground:check` command builds `dist/` first.
+
+Run all playground checks:
+
+```sh
+pnpm playground:check
+```
+
+The clean fixture must produce no warnings. The `fixtures/violations` fixture
+asserts that representative rules from each config chain still fire. If a rule
+change is intentional, update `playground/fixtures/expected-diagnostics.json`.
+
+See [playground/README.md](./playground/README.md) for details.
+
+In VS Code, open the repository root so the Oxc extension can discover the
+nested playground configs. Run `pnpm build` after changing package source so
+the playground configs can resolve `dist/`, then restart the Oxc servers if
+needed.
+
+### Testing on another project
+
+You can also test locally on a separate project by installing local
+`@alexey-ryabov/style-guide`.
 
 Here is an example of how to test the package on a project that uses `pnpm`:
 inside the project, install the local package via path to ensure it installs

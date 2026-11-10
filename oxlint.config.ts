@@ -4,6 +4,10 @@ import nodeConfig from './oxlint/configs/node.ts';
 
 export default defineConfig({
   extends: [nodeConfig],
+  ignorePatterns: ['playground/**'],
+  options: {
+    typeAware: true,
+  },
   // TODO: `env` isn't inherited https://github.com/oxc-project/oxc/issues/20087
   env: {
     es2026: true,

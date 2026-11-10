@@ -1,0 +1,26 @@
+{
+  "oxlint": [
+    { "ruleId": "eslint/no-debugger", "severity": "error" },
+    { "ruleId": "typescript/no-explicit-any", "severity": "error" },
+    { "ruleId": "import/no-duplicates", "severity": "warning" },
+    { "ruleId": "unicorn/prefer-node-protocol", "severity": "error" },
+    { "ruleId": "react/jsx-boolean-value", "severity": "warning" },
+    { "ruleId": "react-js/jsx-sort-props", "severity": "warning" },
+    { "ruleId": "jsx-a11y/alt-text", "severity": "warning" },
+    { "ruleId": "tsdoc/syntax", "severity": "error" }
+  ],
+  "eslint": [
+    {
+      "ruleId": "@eslint-community/eslint-comments/require-description",
+      "severity": "error"
+    },
+    {
+      "ruleId": "@eslint-react/no-leaked-conditional-rendering",
+      "severity": "warning"
+    },
+    {
+      "ruleId": "storybook/no-redundant-story-name",
+      "severity": "warning"
+    }
+  ]
+}
